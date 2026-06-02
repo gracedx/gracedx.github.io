@@ -1,0 +1,4 @@
+# Node and Python artifacts
+node_modules/
+dist/
+__pycache__/
