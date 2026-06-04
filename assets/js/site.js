@@ -7,3 +7,100 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 });
+
+const phrases = [
+  "building tools",
+  "writing essays",
+  "collecting ideas",
+  "making mistakes",
+  "drinking coffee"
+];
+
+const ticker = document.getElementById("ticker");
+
+const alphabet =
+  " abcdefghijklmnopqrstuvwxyz";
+
+let currentPhrase = phrases[0];
+
+function createTicker(phrase) {
+  ticker.innerHTML = "";
+
+  for (const char of phrase) {
+    const slot = document.createElement("div");
+    slot.className = "char";
+
+    const track = document.createElement("div");
+    track.className = "char-track";
+
+    for (const letter of alphabet) {
+      const row = document.createElement("div");
+      row.textContent = letter;
+      track.appendChild(row);
+    }
+
+    const index = alphabet.indexOf(char.toLowerCase());
+
+    track.style.transform =
+      `translateY(${-index}em)`;
+
+    slot.appendChild(track);
+    ticker.appendChild(slot);
+  }
+}
+
+function animateTo(nextPhrase) {
+  const maxLength = Math.max(
+    currentPhrase.length,
+    nextPhrase.length
+  );
+
+  while (ticker.children.length < maxLength) {
+    const slot = document.createElement("div");
+    slot.className = "char";
+
+    const track = document.createElement("div");
+    track.className = "char-track";
+
+    for (const letter of alphabet) {
+      const row = document.createElement("div");
+      row.textContent = letter;
+      track.appendChild(row);
+    }
+
+    slot.appendChild(track);
+    ticker.appendChild(slot);
+  }
+
+  [...ticker.children].forEach((slot, i) => {
+    const track = slot.querySelector(".char-track");
+
+    const targetChar =
+      (nextPhrase[i] || " ").toLowerCase();
+
+    const targetIndex =
+      alphabet.indexOf(targetChar);
+
+    const STEP = 0.3;
+
+    track.style.transition =
+  "transform 1s cubic-bezier(.22,.61,.36,1)";
+
+    track.style.transitionDelay =
+      `${i * 30}ms`;
+
+    track.style.transform =
+      `translateY(${-targetIndex}em)`;
+  });
+
+  currentPhrase = nextPhrase;
+}
+
+createTicker(currentPhrase);
+
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % phrases.length;
+  animateTo(phrases[index]);
+}, 3500);
