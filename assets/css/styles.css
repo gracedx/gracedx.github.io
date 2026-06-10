@@ -109,22 +109,36 @@ details[open] > summary::before {
 
 .created-nav {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
+}
+
+.section-tab {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
   font-family: monospace, serif;
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
-    <!--font-style: italic;-->
+  color: inherit;
 }
 
-.created-nav a:hover {
-  font-family: monospace, serif;
-    font-style: normal;
-  text-transform: uppercase;
-    font-weight: 400;
-  letter-spacing: 0px;
+.section-tab:hover,
+.section-tab.active {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.created-section {
+  display: none;
+}
+
+.created-section.active {
+  display: block;
 }
 
 .section-heading-link {

@@ -28,16 +28,16 @@
     <div class="wrap page-body content">
       <h2>CREATED</h2>
       <p>update (personal and professional sections? writing or not here?)</p>
-       <nav class="created-nav">
-      <a href="#projects">01 PROJECTS</a>
-      <a href="#research">02 RESEARCH</a>
-      <a href="#writing">03 WRITING</a>
-      <a href="#experiments">04 EXPERIMENTS</a>
-    </nav>
-<br>
+      <nav class="created-nav" aria-label="Section tabs">
+        <button type="button" class="section-tab active" data-target="projects">01 PROJECTS</button>
+        <button type="button" class="section-tab" data-target="research">02 RESEARCH</button>
+        <button type="button" class="section-tab" data-target="writing">03 WRITING</button>
+        <button type="button" class="section-tab" data-target="experiments">04 EXPERIMENTS</button>
+      </nav>
+
     <!-- PROJECTS -->
 
-    <section id="projects" class="created-section">
+    <section id="projects" class="created-section active">
       <h3><a href="#top" class="section-heading-link">01 PROJECTS</a></h3>
 
       <div class="project-grid">
@@ -62,8 +62,7 @@
 
       </div>
     </section>
-<br>
-<br>
+
     <!-- RESEARCH -->
 
     <section id="research" class="created-section">
@@ -91,8 +90,7 @@
 
       </div>
     </section>
-<br>
-<br>
+
     <!-- WRITING -->
 
     <section id="writing" class="created-section">
@@ -120,8 +118,7 @@
 
       </div>
     </section>
-<br>
-<br>
+
     <!-- EXPERIMENTS -->
 
     <section id="experiments" class="created-section">
@@ -157,5 +154,20 @@
   </footer>
 
   <script src="assets/js/site.js"></script>
+  <script>
+    document.querySelectorAll('.section-tab').forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+
+        document.querySelectorAll('.section-tab').forEach((tab) => {
+          tab.classList.toggle('active', tab === button);
+        });
+
+        document.querySelectorAll('.created-section').forEach((panel) => {
+          panel.classList.toggle('active', panel.id === target);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
