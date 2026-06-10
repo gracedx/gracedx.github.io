@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 const phrases = [
-  "building tools",
-  "writing essays",
-  "collecting ideas",
-  "making mistakes",
-  "drinking coffee"
+  "building",
+  "scarcity & trust",
+  "cafes in boston",
+  "fintech & payments",
+  "the mbta"
 ];
 
 const ticker = document.getElementById("ticker");
