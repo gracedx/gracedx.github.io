@@ -9,17 +9,18 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 const phrases = [
-  "building",
-  "scarcity & trust",
-  "cafes in boston",
-  "fintech & payments",
-  "the mbta"
+  "principles by ray dalio (book)      ",
+  "deep green by christian kuria (song)      ",
+  "zmh.github.io/personal-site-gallery (site)",
+  "backrooms wiki (site)",
+  "felipe's (food)",
+    "the mbta (the mbta)"
 ];
 
 const ticker = document.getElementById("ticker");
 
 const alphabet =
-  " abcdefghijklmnopqrstuvwxyz";
+  " abcdefghijklmnopqrstuvwxyz()./ -'";
 
 let currentPhrase = phrases[0];
 
@@ -104,3 +105,30 @@ setInterval(() => {
   index = (index + 1) % phrases.length;
   animateTo(phrases[index]);
 }, 3500);
+
+const galleryImage =
+  document.getElementById('gallery-image');
+
+if (galleryImage) {
+
+  const images = [
+    'assets/images/gdx1.jpg',
+    'assets/images/gdx2.jpg',
+    'assets/images/gdx3.jpg',
+    'assets/images/gdx4.jpg',
+    'assets/images/gdx5.jpg'
+  ];
+
+  let current = 0;
+
+  galleryImage.addEventListener('click', () => {
+
+    current =
+      (current + 1) % images.length;
+
+    galleryImage.src =
+      images[current];
+
+  });
+
+}

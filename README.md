@@ -1,1 +1,1 @@
-personal website built with html/css/js and github copilot
+personal website built with html/css/js and the help of github copilot / chatgpt

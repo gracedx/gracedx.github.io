@@ -19,8 +19,14 @@ html {
 body{display:flex;flex-direction:column;min-height:100vh;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--accent); background:var(--bg); }
 main{flex:1}
 .wrap{max-width:980px;margin:0 0 0 24px;padding:20px 24px 20px 24px}
-.page-body{padding-left:60px;margin-left:50px}
-.site-header{background:var(--header-bg); color:var(--header-text); border-bottom:0px solid rgba(255,255,255,.12)}
+.page-body{padding-left:60px;margin-left:50px; margin-right: 50px;}
+.site-header{
+  background:var(--header-bg); color:var(--header-text); border-bottom:0px solid rgba(255,255,255,.12); position: sticky; top: 0; z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;}
 .site-title{display:inline-block;margin:;padding:2px;font-size:30px;}
 .site-title a{color:inherit;text-decoration:none;display:inline-flex;align-items:center}
 .site-title-main{font-family:'Instrument Serif', serif;font-size:60px}
@@ -70,7 +76,7 @@ details[open] > summary::before {
 
 .label {
   font-family: monospace;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
@@ -78,7 +84,7 @@ details[open] > summary::before {
 #ticker {
   display: flex;
   font-family: monospace, serif;
-  font-size: 26px;
+  font-size: 12px;
   line-height: 1.0em;
   
   
@@ -97,7 +103,7 @@ details[open] > summary::before {
   position: relative;
   left: 0;
   top: 0;
-  transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
+  transition: transform 0.3s cubic-bezier(.22,.61,.36,1);
 }
 
 .char-track div {
@@ -111,6 +117,14 @@ details[open] > summary::before {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  position: sticky;
+  top: 10em;
+  z-index: 1000; 
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .section-tab {
@@ -118,19 +132,24 @@ details[open] > summary::before {
   border: 0;
   padding: 0;
   cursor: pointer;
-  font-family: monospace, serif;
+  font-family: 'Instrument Serif', serif;
   font-size: 1.2rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 500;
   letter-spacing: 0px;
   color: inherit;
+  font-style: italic;
 }
 
-.section-tab:hover,
+.section-tab:hover{
+  font-family: monospace, serif;
+  text-transform: uppercase;
+}
+
 .section-tab.active {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  text-transform: lowercase;
+  font-family: monospace, serif;
+  text-transform: uppercase;
+  font-style: normal;
 }
 
 .created-section {
@@ -155,6 +174,7 @@ details[open] > summary::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+  margin-right: 2.5rem;
 }
 
 .project-card {
@@ -169,8 +189,19 @@ details[open] > summary::before {
 }
 
 .project-card:hover {
-  border-color: #bdbdbd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: #c0caf0;
+  border-color: #ffffff;
+  box-shadow: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-card:hover .project-info,
+.project-card:hover .project-info h4,
+.project-card:hover .project-info p,
+.project-card:hover .project-info span {
+  color: #fff;
+  text-decoration: none;
 }
 
 .project-card img {
@@ -183,9 +214,7 @@ details[open] > summary::before {
   transition: transform .4s ease;
 }
 
-.project-card:hover img {
-  transform: scale(1.01);
-}
+
 
 h1 {
   font-family: "Instrument Serif", serif;
@@ -217,4 +246,27 @@ h1 {
 
 .project-info p {
   margin: 0;
+}
+
+sup {
+  font-size: 0.5em;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 4rem;
+
+  align-items: start;
+}
+
+.gallery {
+  top: 120px;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+
+  cursor: pointer;
 }
