@@ -8,6 +8,83 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 
+const galleryImage =
+  document.getElementById('gallery-image');
+
+if (galleryImage) {
+
+  const images = [
+    'assets/images/gdx1.jpg',
+    'assets/images/gdx2.jpg',
+    'assets/images/gdx3.jpg',
+    'assets/images/gdx4.jpg',
+    'assets/images/gdx5.jpg'
+  ];
+
+  let current = 0;
+
+  galleryImage.addEventListener('click', () => {
+
+    current =
+      (current + 1) % images.length;
+
+    galleryImage.src =
+      images[current];
+
+  });
+
+}
+
+
+
+const curiosities = [
+  "p2p payments",
+  "scarcity vs. trust",
+  "payments in healthcare",
+  "personal investing pls help",
+  "zero knowledge proofs",
+  "donna tartt",
+  "vibecoding"
+];
+
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
+
+const el = document.getElementById("scramble");
+
+let curiositiesIndex = 0;
+
+function scrambleTo(text) {
+  let frame = 0;
+
+  const interval = setInterval(() => {
+    let output = "";
+
+    for (let i = 0; i < text.length; i++) {
+      if (i < frame) {
+        output += text[i];
+      } else {
+        output += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+
+    el.textContent = output;
+
+    frame++;
+
+    if (frame > text.length) {
+      clearInterval(interval);
+
+      setTimeout(() => {
+        curiositiesIndex = (curiositiesIndex + 1) % curiosities.length;
+        scrambleTo(curiosities[curiositiesIndex]);
+      }, 2000);
+    }
+  }, 50);
+}
+
+scrambleTo(curiosities[0]);
+
+
 const phrases = [
   "principles by ray dalio (book)      ",
   "deep green by christian kuria (song)      ",
@@ -105,30 +182,3 @@ setInterval(() => {
   index = (index + 1) % phrases.length;
   animateTo(phrases[index]);
 }, 3500);
-
-const galleryImage =
-  document.getElementById('gallery-image');
-
-if (galleryImage) {
-
-  const images = [
-    'assets/images/gdx1.jpg',
-    'assets/images/gdx2.jpg',
-    'assets/images/gdx3.jpg',
-    'assets/images/gdx4.jpg',
-    'assets/images/gdx5.jpg'
-  ];
-
-  let current = 0;
-
-  galleryImage.addEventListener('click', () => {
-
-    current =
-      (current + 1) % images.length;
-
-    galleryImage.src =
-      images[current];
-
-  });
-
-}

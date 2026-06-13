@@ -32,7 +32,7 @@ main{flex:1}
 .site-title-main{font-family:'Instrument Serif', serif;font-size:60px}
 .site-title-dx{font-family:'Instrument Serif', serif; margin-left:0.15em; font-size:60px; font-style:italic;}
 .site-nav{float:right}
-.site-nav a{margin-left:16px; text-decoration:none;color:#c0caf07a; font-family:'Instrument Serif', serif;font-size:24px}
+.site-nav a{margin-left:16px; text-decoration:none;color:#c0caf0; font-family:'Instrument Serif', serif;font-size:24px}
 .site-nav a.active, .site-nav a:hover{color:var(--header-text); font-style:italic;}
 .site-nav a.active:hover{text-transform:uppercase;}
 .archive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
@@ -41,7 +41,8 @@ main{flex:1}
 h2{font-family: 'Instrument Serif', serif; margin-top:0; font-style:italic;text-transform:uppercase; font-size:28px}
 h3{font-family: monospace, serif; margin-top:0; font-style:light; font-size:20px; font-weight:500; letter-spacing:0.07em;}
 .content{padding:28px 0 28px 0}
-.site-footer{border-top:1px solid #eee;color:var(--muted);padding:18px 0;margin-top:40px}
+.site-footer{border-top:1px solid #eee;color:var(--muted);padding:5px;margin-top:20px;
+}
 
 @media (max-width:900px){.archive-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.archive-grid{grid-template-columns:1fr}.site-nav{float:none;margin-top:12px}}
@@ -269,4 +270,9 @@ sup {
   display: block;
 
   cursor: pointer;
+
+}
+
+#scramble {
+  font-family: monospace;
 }

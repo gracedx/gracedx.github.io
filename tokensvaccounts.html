@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>todaze — Grace</title>
+  <title>Tokens vs. Accounts — Grace</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -38,139 +38,134 @@
   <main>
 
     <div class="wrap page-body content">
+      <h2>CREATED</h2>
 
-      <nav class="created-nav project-nav">
-
-        <a href="created.html">
-          01 PRODUCTS
-        </a>
-
-        <a href="created.html">
-          02 PROJECTS
-        </a>
-
-        <a href="created.html">
-          03 PERSPECTIVES
-        </a>
-
-        <a href="created.html">
-          04 EXPERIMENTS
-        </a>
-
-      </nav>
-
-      <br>
-
-      <a href="created.html#projects" class="back-link">
-        ← back to archive
+      <a href="created.html#products" class="back-link">
+        ← back to creations
       </a>
+      <br>
+      <br>
+      <h2 style="font-family: monospace; font-style: normal; text-transform: lowercase; font-width: 200px;">Payments Taxonomy: Tokens vs. Accounts</h2>
 
-      <h2>todaze</h2>
-
-      <p class="project-subtitle">
-        follow your friends' to-do lists
-      </p>
+      <p style="margin-left: 0px;">
+        tldr: the rapid innovation of digital payments has led to new definitions and expansion of semantic 
+        understandings; this new framework
+        consolidates both modern and historical perspectives toward token vs. accounts definitions      </p>
 
       <img
-        src="assets/images/todaze.png"
-        alt="todaze screenshot"
+        src="assets/images/taxonomy.png"
+        alt="tokens v accoounts"
         class="project-hero"
+        width="220px"
       >
 
       <br><br>
 
+      <a href="https://docs.google.com/presentation/d/12qHob6W-ujiKzJAUU9VarS4H29-M7cgd/edit?usp=share_link&ouid=100592278678888966374&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+            presentation →
+          </a> <br>
+          <a href="https://drive.google.com/file/d/1p7zKeX3FKC84Y8qPCdh5k6JOSLNrCPwK/view?usp=sharing" target="_blank" rel="noopener noreferrer"> paper →
+          </a>
+     <p></p>
+
       <div class="project-meta">
 
         <div>
-          <strong>type</strong><br>
-          web app
-        </div>
+          <strong>type:</strong>
+          research 
+         </div>
 
         <div>
-          <strong>status</strong><br>
-          live
+          <strong>status:</strong> presented at federal reserve bank of boston, august 2023 
         </div>
-
         <div>
-          <strong>stack</strong><br>
-          html, css, javascript, firebase
-        </div>
 
       </div>
 
       <br><br>
 
-      <h3>overview</h3>
+      <h3>why</h3>
 
       <p>
-        Todaze is a social productivity app that allows
-        users to share to-do lists with friends.
+        The summer of 2023, I got to be part of one of the coolest internships - I was part of this confidential
+        CBDC (Central Banking Digital Currency) team at the Federal Reserve. (The team has since pivoted following
+        Trump's Executive Order 14178 which banned CBDCs, though from what I can tell, they're still doing cool
+        and probably confidential work.) During my time there, I learned tons about the digital payments 
+        space, but I kept coming across 2 terms: tokens and accounts.
       </p>
-
-      <p>
-        The idea emerged from wanting accountability
-        without the pressure of formal productivity
-        systems.
+      <p>Every time I tried to better understand what they defined, I found myself getting more confused. 
+        I'd learn that the Bitcoin ecosystem uses tokens, while the Ethereum ecosystem uses accounts. Then I'd see
+        some website talk about ETH tokens. I'd learn that cash is a token, but that tokenization of assets relates to
+        turning assets digital (which cash certainly isn't). So on and so forth - until I slowly realized that especially
+        with how nascent blockchain technology is, the terms tokens and accounts mean different things in different contexts.
       </p>
-
-      <p>
-        Instead of optimizing tasks, the app focuses
-        on visibility and lightweight social motivation.
+      <p>Further - a thorough analysis or synthesis of tokens and accounts did not yet exist. There were definitions, but these
+        definitions were often incomprehensive, or more biased toward historical definitions rather than current
+        usages of the terms in the ecosystems. Thus, especially as I had access to some of the top payments experts,
+        I sought to develop a comprehensive framework.
       </p>
 
       <br>
 
-      <h3>features</h3>
-
+      <h3>what</h3>
+      <strong>problem:</strong>
       <ul>
-        <li>Create and manage personal tasks</li>
-        <li>View friends' task lists</li>
-        <li>Real-time updates</li>
-        <li>Minimalist interface</li>
+        <li>Usage of the terms “tokens,” “accounts,” “push,” and “pull” are unstandardized and often conflated
+          <li>Tokens are often related to 
+          "push" payments systems and accounts are often related to "pull" payments systems, but this relationship is not
+          one-to-one </li>
+        </li>
+        <li>There exists a gap in the literature which synthesizes the nuanced definitions</li>
+         </ul>
+      <strong>process:</strong>
+      <ul>
+        <li>We break down terminology usage with a taxonomic approach of payments properties, systems, and intermediation</li>
+         </ul>
+          <strong>abstract:</strong>
+      <ul>
+        <li>In research and discussion of digital payments, semantic usage should be rigorously defined, with the following contexts considered:</li>
+         <ul>
+          <li>data format ("UXTO" vs "account")</li>
+          <li>verification structure ("store of value" vs. "ledger")</li>
+          <li>initiator of transaction process</li>
+          <li>custody/relationship to value("push" vs. "pull")</li>
+          <li>verification structure("store of value" vs. "ledger")</li>
+          <li>relationship to value, permission to transact ("individual" vs. "third-party")</li>
+         </ul>
+        <li>Especially with rise of AI and "tokens" taking on its <em>n</em>-th meaning, the above taxonomy enahances
+          shared understanding and minimizes confusion due to vague terminology. Context specification plays a crucial role
+          in clear definitions
+        </li>
       </ul>
 
       <br>
-
+      <h3>how</h3>
+      <p>
+        Every single person I worked with that summer was instrumental to my development and understanding of the payments space.
+        Rob Flynn (Product) and Anders Brownworth (Engineering) in particular played a crucial role in this paper. I also sought additional guidance from Dr. Charles Kahn,
+        a UIUC professor whose research in the CBDC space I had come across in my literature review. He kindly reviewed
+        my initial framework and provided key insights to develop it into its current state. 
+        </p>
       <h3>reflections</h3>
 
       <p>
-        This project taught me a great deal about
-        designing social experiences and balancing
-        simplicity against functionality.
+        I loved this internship, this research, and the team I was a part of. I'm incredibly grateful not only for the
+        people who helped advise this paper, but also the people on the team I worked with, including Eric Thompson, Angela Lindstrom, Sunayna Tuteja,
+        Ethan Olesinski, and many, many more - who were instrumental not only
+        to my understanding of payments, but also my broader professional and personal development. 
       </p>
 
       <p>
-        Future versions could include richer social
-        interactions, recurring tasks, and public
-        accountability groups.
-      </p>
+        </p>
 
       <br>
-
-      <h3>links</h3>
-
-      <p>
-        <a href="#">
-          live site →
-        </a>
-      </p>
-
-      <p>
-        <a href="#">
-          github →
-        </a>
-      </p>
-
     </div>
 
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <a href="mailto:grace.d.xu@gmail.com">
-        get in touch
-      </a>
-    </div>
+   <div class="wrap">get in touch: <a href="mailto:grace.d.xu@gmail.com">mail</a> | <a href="https://github.com/gracedx">github</a> | <a href="https://www.linkedin.com/in/grace-xu-a44543216/">linkedin</a></div>
+  
   </footer>
 
   <script src="assets/js/site.js"></script>

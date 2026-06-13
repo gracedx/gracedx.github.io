@@ -55,10 +55,15 @@
         src="assets/images/todaze.png"
         alt="todaze screenshot"
         class="project-hero"
-        width="200px"
+        width="220px"
       >
 
       <br><br>
+
+      <a href="https://udot-c2fa0.web.app/login" target="_blank" rel="noopener noreferrer">
+            live web app →
+          </a>
+     <p></p>
 
       <div class="project-meta">
 
@@ -68,89 +73,98 @@
          </div>
 
         <div>
-          <strong>status:</strong>deployed
+          <strong>status:</strong> deployed aug. 2025; in beta
         </div>
 
         <div>
           <strong>tools/stack:</strong>
-          html, css, javascript, firebase
+          html, css, react.js, next.js, firebase
         </div>
+        <div>
 
       </div>
 
       <br><br>
 
-      <h3>overview</h3>
+      <h3>why</h3>
 
       <p>
-        Todaze is a social productivity app that allows
-        users to share to-do lists with friends.
-      </p>
-
-      <p>
-        The idea emerged from wanting accountability
-        without the pressure of formal productivity
-        systems.
-      </p>
-
-      <p>
-        Instead of optimizing tasks, the app focuses
-        on visibility and lightweight social motivation.
+         
+        For a few friends of mine, particularly during busy seasons of our lives, we'd often spend time or call just to
+        study and work together; we'd tell each other our to-do lists, and check in to see if we had completed
+        what we had hoped. In fact, all the way back during Covid, some friends and I had a groupchat where we'd literally just text each other our to-do lists.
+        Especially as more and more of my friends became long-distance,
+        I wanted a dedicated app that my friends and I could use to motivate each other even if we weren't together or had the time to call.
+        
+        <br><br>Todaze is exactly that - a way to share with friends what we're working on, and check in on each other's progress. 
       </p>
 
       <br>
 
-      <h3>features</h3>
-
+      <h3>what</h3>
+      <strong>social features:</strong>
       <ul>
-        <li>Create and manage personal tasks</li>
-        <li>View friends' task lists</li>
-        <li>Real-time updates</li>
-        <li>Minimalist interface</li>
+        <li>follow users from users page to see their to-do lists in your feed page</li>
+        <li>real-time updates on feed page, in chronological order</li>
+        <li>see when friends add new tasks or complete tasks</li>
+      </ul>
+
+      <strong>to-do list features:</strong>
+      <ul>
+        <li>create tasks on home page</li>
+        <li>hover over tasks to see lock, top, and delete buttons</li>
+        <ul> <li><strong>lock:</strong> private tasks with the lock button, preventing them from appearing on the feed</li>
+
+        <li><strong>top:</strong> prioritize tasks with the "↑" button, bringing tasks to the top of your personal list</li>
+        <li><strong>delete:</strong> removes tasks from both your list and the feed</li>
+              </ul>
+        <li>drag and drop tasks to reorder them</li>
+       <li>double click on existing tasks to edit them</li>
+               <li>check off completed tasks</li>
       </ul>
 
       <br>
+      <h3>how</h3>
+      <p>
+        This app was built through a combination of free ChatGPT prompting and manual coding/debugging. I utilized VSCode, ChatGPT, Github, terminal, Firebase, 
+        and also good old Googling. I also had not yet seen Claude Code in action when I first deployed this but now that I have, I may
+        cave soon... especially as in further iterations, I hope to
+      learn a more hands-off workflow. </p>
+
 
       <h3>reflections</h3>
 
       <p>
-        This project taught me a great deal about
-        designing social experiences and balancing
-        simplicity against functionality.
+        This project was born out of 3 main goals: 1) make an app where my friends and I could motivate each other on our to-do lists,
+        2) create a really simple but effective to-do list app, and 3) learn to vibecode a web app with a database backend.
+        I was able to achieve all three to a baseline level, learning a ton from this process. It was also fun seeing how my friends used the app and suggestions they had. I was able to incorporate
+        several UI suggestions, particularly on the feed page, and have been working through larger UX improvements. 
+      
+         </p><p>
+        With that said, this app
+        is very much a minimally viable product, emphasis on the minimal, and there are many
+        updates and improvements that I'd like to make, with quite a few feature updates in the pipeline.
       </p>
 
       <p>
-        Future versions could include richer social
-        interactions, recurring tasks, and public
-        accountability groups.
+        </p>
+
+      <p>
+        Moving forward, I hope to incorporate more social features, learn about more scalable security, and 
+        continuously iterate on the product. Probably my favorite personal project!
       </p>
 
       <br>
-
-      <h3>links</h3>
-
-      <p>
-        <a href="#">
-          live site →
-        </a>
-      </p>
-
-      <p>
-        <a href="#">
-          github →
-        </a>
-      </p>
-
+      <a href="created.html#products" class="back-link">
+        ← back to creations
+      </a>
     </div>
 
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <a href="mailto:grace.d.xu@gmail.com">
-        get in touch
-      </a>
-    </div>
+   <div class="wrap">get in touch: <a href="mailto:grace.d.xu@gmail.com">mail</a> | <a href="https://github.com/gracedx">github</a> | <a href="https://www.linkedin.com/in/grace-xu-a44543216/">linkedin</a></div>
+  
   </footer>
 
   <script src="assets/js/site.js"></script>
