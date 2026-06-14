@@ -44,7 +44,7 @@ const curiosities = [
   "personal investing pls help",
   "zero knowledge proofs",
   "donna tartt",
-  "vibecoding"
+  "openclaw"
 ];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
