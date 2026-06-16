@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CAT — Grace</title>
+  <title>linal — Grace</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -45,14 +45,14 @@
       </a>
       <br>
       <br>
-      <h2 style="font-family: monospace; font-style: normal; text-transform: lowercase; font-width: 200px;">claw agent team (CAT)</h2>
+      <h2 style="font-family: monospace; font-style: normal; text-transform: lowercase; font-width: 200px;">diy linalg</h2>
 
       <p style="margin-left: 0px;">
-        tldr: a zoom call with you and multiple agents
+        tldr: accessible intro to proof-based linear algebra
       </p>
 
       <img
-        src="assets/images/cat.png"
+        src="assets/images/linal.png"
         alt="cat screenshot"
         class="project-hero"
         width="220px"
@@ -60,25 +60,31 @@
 
       <br><br>
 
-      <a href="https://github.com/binamkayastha/ClawAgentTeam" target="_blank" rel="noopener noreferrer">
-            github repo →
-          </a>
+      <a href="assets/docs/linal1.pdf" target="_blank" rel="noopener noreferrer">
+            notes_1_intro_to_proofs (4 pages) →
+          </a><br>
+      <a href="assets/docs/linal2.pdf" target="_blank" rel="noopener noreferrer">
+            notes_2_intro_to_fields (6 pages) →
+          </a><br>
+      <a href="assets/docs/linal3.pdf" target="_blank" rel="noopener noreferrer">
+            notes_3_intro_to_vector_spaces (6 pages) →
+          </a><br> 
      <p></p>
 
       <div class="project-meta">
 
         <div>
           <strong>type:</strong>
-          local app 
+          notes
          </div>
 
         <div>
-          <strong>status:</strong> developed june 2026
+          <strong>status:</strong> in progress
         </div>
 
         <div>
           <strong>tools/stack:</strong>
-          electron, python, pi, html, css
+          LaTeX via Overleaf
         </div>
         <div>
 
@@ -89,62 +95,47 @@
       <h3>why</h3>
 
       <p>
-        This app was created for a16z Boston Tech Week's Multi-Agent Orchestration Hackathon, cohosted by SundAI, AGI House, Weights & Biases,
-        E14, and TNT. The backend was developed by Binam, Robin, Mike, and Noelia, while I focused on frontend, and Siddarth bootstrapped the startup script. The idea
-        was developed by Binam, who works with multiple agents separately at work, but each agent operates without the context of the others. The goal 
-        was to create a "Zoom call" with multiple agents, so each agent has comprehensive context and they can collaborate
-        on tasks together. Essentially, allowing agents to touch base, ensure alignment, identify synergies, and all the reasons
-        there are meetings at work :p
+        Prison Math Project pairs math mentors with mentees to write about math. 
+        My pen pal is Chris, who was fortunately also interested in learning linear algebra, 
+        as it was my topic of interest as well. I thus developed these letters 
+        as a way to learn proof-based linear algebra.
       </p>
-      <p>For example, you may develop an app employing 2 agents, a software developer agent and a designer agent. Each agent
-        can work on their tasks, but can interface as needed. If the designer decides on a design change that affects backend,
-        it can communicate needs accordingly. To further reduce friction, this app allows for voice chat as well,
-        where the user can speak to the agents and the agents can speak back.
+      <p>While the links here are to the letters, I am hoping to eventually adapt the letters and create more material 
+        to aid in studying proof-based linear algebra, a process that will refresh my own learnings as well.
       </p>
+      <p>
+        The ultimate goal is to provide a guide to proof-based linear algebra accessible 
+        to any level, similar to Linear Algebra Done Right (Axler) but more simplified (e.g. explaining 
+        all the math notations and abbreviations).
+      </p>
+      
 
       <br>
 
       <h3>what</h3>
-      <strong>overall features:</strong>
+      <p>there are only 3 note docs now, so there is significantly more material I am hoping to create. beloww 
+        I list topics covered in the existing materials:
+      </p>
       <ul>
-        <li><strong>linking: </strong> linking of files for context</li>
-        <li><strong>speech-to-text & text-to-speech:</strong> communicate via text or voice with agents</li>
-        <li><strong>agent creation:</strong> add new agents, with designated roles</li>
-        <li><strong>model selection:</strong> pi's agent harness offers access to hundreds of models, including from Anthropic and OpenAI </li>
-        <li><strong>team chat:</strong> summaries of all agent responses & chats are collated in team chat sidebar</li>
-        <li><strong>relay toggle:</strong> all summaries are relayed to all agents for context, but this toggle can also be turned off</li>
+        <li><strong>proof-writing foundation: </strong> definitions, types of proofs, math symbols</li>
+        <li><strong>basics of proof-based linear algebra:</strong> field of scalars, operations, examples</li>
+        <li><strong>vector spaces:</strong> coordinates, addition, scalar multiplication, identities, inverses</li>
+       
       </ul>
 
       <br>
       <h3>how</h3>
       <p>
-        For the UI, I heavily relied on Github Copilot in VScode for the workflow here, and most of all on my awesome team members.
-      This was a super cool learning experience where I got to learn about wireframing and owning UI design, while being able
-    to learn a ton and get a glimpse into the coding of my team members. Honestly, huge shoutouts to Binam and Robin, who I 
-    literally just met that day, and yet they took the time to answer every question I had and show me 
-    how to set up various agentic coding workflows. In terms of the real "how" for this app - ask <a href="https://github.com/robinnarsinghranabhat">the</a>
-    <a href="https://github.com/binamkayastha">software</a> <a href="https://github.com/mpauls2839">engineers</a> on the team :) </p>
-
+        I LaTeXed these by hand (i.e., no AI) in Overleaf. For the content, I referenced 
+        Linear Algebra Done Right (Axler) and most of all my Honors Linear Algebra notes taken under 
+        Prof. Christos Mantoulidis, who inspired me to major in math.
+        </p>
 
       <h3>reflections</h3>
 
       <p>
-        This was an incredibly fun project - and also my first hackathon! I'd only gotten 1.5 hours of sleep the night before,
-        having flown back in from visiting family (and had procrastinated packing), but I knew I wanted make it to the last
-        Boston Tech Week event after having missed most of it - and I'm so glad I did. This was a one-day hackathon on Sunday,
-        where I got to meet so many amazing people, and especially this amazing team. It also really opened my world to the possibilities of 
-        agentic coding - the demos were incredible, and all coded in less than 10 hours. There were fully operational 
-        apps for everything from safe agentic commerce to travel apps with self-guided tours. Definitely left me with a 
-        wave of AI existentialism but also an insane amount of excitement for what's possible.
-      </p>
-
-      <p>
-        </p>
-
-      <p>
-        Looking ahead - I hope to improve my knowledge of agents and coding to a level where I'd be able to hack
-        something like this from beginning to end - one day. Super grateful to have had this experience and most of all to have
-        been able to work with my team on this.
+        I hope to spend more time more consistently writing these to my pen pal as well as develop 
+        more of these materials.
       </p>
 
       <br>

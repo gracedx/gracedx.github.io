@@ -45,14 +45,14 @@
       </a>
       <br>
       <br>
-      <h2 style="font-family: monospace; font-style: normal; text-transform: lowercase; font-width: 200px;">law firm workflow automations</h2>
+      <h2 style="font-family: monospace; font-style: normal; text-transform: lowercase; font-width: 200px;">automated revenue reports</h2>
 
       <p style="margin-left: 0px;">
-        tldr: changed manual productivity reports into an automated dashboard
+        tldr: developed fully automated productivity & revenue reports for small law firm
       </p>
 
       <img
-        src="assets/images/law reports.png"
+        src="assets/images/lawreports.png"
         alt="law reports screenshot"
         class="project-hero"
         width="220px"
@@ -60,8 +60,11 @@
 
       <br><br>
 
-      <a href="https://github.com/binamkayastha/ClawAgentTeam" target="_blank" rel="noopener noreferrer">
-            TO UPDATE user guide →
+      <a href="https://docs.google.com/document/d/1bIsuOyd11udNNS9ON-hkgqa8tlXsrDCv/edit?usp=sharing&ouid=100592278678888966374&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+            user guide (26 pages) →
+          </a> <br>
+           <a href="#">
+            revenue reports [not linked for security]
           </a>
      <p></p>
 
@@ -69,7 +72,7 @@
 
         <div>
           <strong>type:</strong>
-          automated workflow with user guide 
+          reports; automations; handoff guide  
          </div>
 
         <div>
@@ -89,52 +92,121 @@
       <h3>why</h3>
 
       <p>
-        At my local law firm, 
-      </p>
-
+        At a small local law firm, I was tasked to help with the analytics, operations, product migration, 
+        business development, analytics, 
+        and even business valuation - honestly, anything that wasn't law, 
+        I helped with. In many ways, it felt 
+        like working at a startup, given the small size, fast pace, and high ownership. 
+        </p>
+        <p>A key revenue leakage was the firm's loss of billed hours, in which attorneys  
+          were sometimes
+          too busy to enter all of their hours worked. The firm's partner
+          tasked me with quantifying and tracking this lost revenue.
+          </p>
+        <p> To solve this problem, I developed a revenue dashboard, but going beyond the 
+          baseline, I automated the entire 
+          workflow - from refreshing data pulls via API access to updated modeling to employee-facing reports to
+          sending out emails - to just 2 clicks <em>within</em> on the same page. (No opening email, no copy-pasting
+          of data, no opening of the multiple billing softwares.)
+          
+          </p>
+        
       <br>
 
       <h3>what</h3>
-      <strong>overall features:</strong>
+      <strong>automated revenue report (13-tab Excel workbook) features:</strong>
       <ul>
-        <li><strong>linking: </strong> linking of files for context</li>
-        <li><strong>speech-to-text & text-to-speech:</strong> communicate via text or voice with agents</li>
-        <li><strong>agent creation:</strong> add new agents, with designated roles</li>
-        <li><strong>model selection:</strong> pi's agent harness offers access to hundreds of models, including from Anthropic and OpenAI </li>
-        <li><strong>team chat:</strong> summaries of all agent responses & chats are collated in team chat sidebar</li>
-        <li><strong>relay toggle:</strong> all summaries are relayed to all agents for context, but this toggle can also be turned off</li>
-      </ul>
+        <li><strong>data pull via API: </strong>1-click button in Excel that automates data pull from Practice Panther into Excel using time-sensitive API access tokens that are refreshed behind the scenes</li>
+        <li><strong>annualized revenue trends:</strong> charts that annualize weekly data to identify revenue leakages</li>
+        <li><strong>individualized employee reports:</strong> automated emails (via Zapier) that provide each employee with a weekly report of their annualized billed time and productivity trends</li>
+       </ul>
+      <strong>user guide (26-page doc) features:</strong>
+      <ul>
+        <li><strong>how to use automated reports: </strong> simple instructions on Excel filepath and to press the buttons</li>
+        <li><strong>adding new employees to report:</strong> step-by-step instructions for maintaining automations</li>
+        <li><strong>code:</strong> pasted in all code utilized, even shell code used for API token access, for troubleshooting reference</li>
+        <li><strong>zapier set-up:</strong> beginner's guide to zapier for troubleshotting purposes </li>
+        <li><strong>legacy reports guide:</strong> guide to productivity reports prior to the automation of data pull, where there was VBA code for email templates, but the data had to be manually pasted</li>
+           </ul>
 
       <br>
       <h3>how</h3>
       <p>
-        For the UI, I heavily relied on Github Copilot in VScode for the workflow here, and most of all on my awesome team members.
-      This was a super cool learning experience where I got to learn about wireframing and owning UI design, while being able
-    to learn a ton and get a glimpse into the coding of my team members. Honestly, huge shoutouts to Binam and Robin, who I 
-    literally just met that day, and yet they took the time to answer every question I had and show me 
-    how to set up various agentic coding workflows. In terms of the real "how" for this app - ask <a href="https://github.com/robinnarsinghranabhat">the</a>
-    <a href="https://github.com/binamkayastha">software</a> <a href="https://github.com/mpauls2839">engineers</a> on the team :) </p>
+          First, to achieve the tasked goal of quantifying and tracking lost revenue, I quickly developed
+          an Excel model that annualized data, created quotas, included individualized employee tables, and 
+          identified revenue losses
+          incurred for estimated lost hours. This was a base report using Excel that did the job, and that I'd
+          email out to each employee weekly, to provide individualized productivity insights.
+          
+          </p>
+        <p> With that said, this first iteration was heavily manual, and involved too many copy-pastes and 
+          too many clicks. I was copy-pasting the data from 3 different systems into Excel, I was copy-pasting 
+          relevant tables and attaching the 
+          Excels manually into 
+          the emails, 
+          I was copy-pasting the overall email template each time. Essentially, it was working wonderfully for everyone
+          except me, who was finding it increasingly tedious. The number of steps and context switching to
+          pull data also made it more complex to hand off the task for when my time
+          with the firm ended.
+          </p>
+        <p> 
+          So - I decided to automate the workflow.   Using API keys and Zapier, the user only has to click
+          4 buttons I created on page 1 of the Excel workbook, that will 1) refresh the API timed access token, 2) refresh the data pull, 
+          3) refresh the 
+          reports analyses, and 4) pull the new annualized data into employee facing tables, where are then automatically
+          sent through Zapier upon refresh. Initially, I created only 2 buttons - 1) refresh the API timed access token, and
+          2) refresh the data and automatically seend emails, but expanded it out to four upon request. The main reason 
+          was that the director and others at the firm wanted additional visibility into each step in case future 
+          troubleshooting needs arose, as they did not feel as comfortable working with code, and wanted simpler 
+          step-by-step buttons rather than minimizing 2 clicks. The reasoning here can also be found in the 
+          "Suggestions/Advice/Ideas for the future"
+          section of the guide.
+          </p>
+        <p> 
+          In tandem with these reports, I had been heading PMO for our software migration into
+          Practice Panther, a software that provided both timekeeping and billing features.
+          This consolidated our time-entering and billing data into one place, and furthermore, 
+          had an API! In other words - the perfect opportunity for automating the data pulls. Utilizing VBA code, 
+          Excel's Automate Scripts, PowerQuery, and also a few calls with Practice Panther tech support to activate
+          our API access, I was able to fully automate the data pull into just 2 buttons that the analyst has
+          to press on page 1 of the Excel workbook. I then automated the analytics into 2 more buttons,
+          which annualized the data, then pasted the new analytics accordingly, which triggered a no-touch 
+          individualized email report out to employees through Zapier. Again, initially, the Excel data refresh and
+          analytics were all combined into 1 button and the API access refresh being the other button, but the data 
+          refresh was separated out into 3 buttons for easy of troubleshooting. 
+      </p>
 
 
       <h3>reflections</h3>
 
       <p>
-        This was an incredibly fun project - and also my first hackathon! I'd only gotten 1.5 hours of sleep the night before,
-        having flown back in from visiting family (and had procrastinated packing), but I knew I wanted make it to the last
-        Boston Tech Week event after having missed most of it - and I'm so glad I did. This was a one-day hackathon on Sunday,
-        where I got to meet so many amazing people, and especially this amazing team. It also really opened my world to the possibilities of 
-        agentic coding - the demos were incredible, and all coded in less than 10 hours. There were fully operational 
-        apps for everything from safe agentic commerce to travel apps with self-guided tours. Definitely left me with a 
-        wave of AI existentialism but also an insane amount of excitement for what's possible.
+        My first foray into B2B SaaS...? (although this was neither B2B nor SaaS??) On a serious note, this project 
+        at work helped me realize how many efficiency gains and consequently profit increases are possible at 
+        smaller businesses, particularly as AI is making automation of workflows evermore accessible. 
+        </p>
+
+      <p>
+        At a personal 
+        level, I found this process rewarding. I owned this project from start-to-end, from identifying the 
+        opportunity for further automation to researching relevant tools to developing the code with the help of AI to
+        writing the user guide to communicating the necessary change management to analyzing 
+        revenue leakage fixes from the reports. 
+        Most of all, I was able to make an tangible impact. </p>
+        <p> If I were to redo this process 
+        with my knowledge and experiences now, I can imagine that the automations might be different with the progress of 
+        AI. For instance, Zapier seems to becoming more obsolete. Moreover, access 
+        to information has always been a key barrier (e.g. knowing how to set up API calls, or knowing names of 
+        automation softwares) - that information used bely skills, knowledge, years of 
+        effort honed - but now AI can handle much more of the process.  
       </p>
 
       <p>
         </p>
 
       <p>
-        Looking ahead - I hope to improve my knowledge of agents and coding to a level where I'd be able to hack
-        something like this from beginning to end - one day. Super grateful to have had this experience and most of all to have
-        been able to work with my team on this.
+        Overall, I found the learning process of this project, and most of all the tangible positive impact, 
+        rewarding. At some point in the future, I hope to work again in a smaller-sized company, as I do think
+        the impact possible in and with a small team can be multiples of what is possible elsewhere.
       </p>
 
       <br>
