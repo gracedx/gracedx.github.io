@@ -1,3 +1,9 @@
+// Apply saved theme before render to avoid flash
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+})();
+
 // Minimal JS: highlight active nav link based on URL
 document.addEventListener('DOMContentLoaded',function(){
   var links=document.querySelectorAll('.site-nav a');
@@ -6,6 +12,16 @@ document.addEventListener('DOMContentLoaded',function(){
       a.classList.add('active');
     }
   });
+
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = isDark ? '' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
 });
 
 const galleryImage =
