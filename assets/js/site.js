@@ -22,6 +22,35 @@ document.addEventListener('DOMContentLoaded',function(){
       localStorage.setItem('theme', next);
     });
   }
+
+  const projectCards = document.querySelectorAll('.project-card');
+  if (projectCards.length) {
+    const savedScroll = sessionStorage.getItem('createdScroll');
+    const savedTab = sessionStorage.getItem('createdTab');
+    if (savedScroll !== null) {
+      if (savedTab) {
+        document.querySelectorAll('.section-tab').forEach(t =>
+          t.classList.toggle('active', t.getAttribute('data-target') === savedTab)
+        );
+        document.querySelectorAll('.created-section').forEach(s =>
+          s.classList.toggle('active', s.id === savedTab)
+        );
+      }
+      requestAnimationFrame(() => {
+        window.scrollTo(0, parseInt(savedScroll, 10));
+        sessionStorage.removeItem('createdScroll');
+        sessionStorage.removeItem('createdTab');
+      });
+    }
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const activeTab = document.querySelector('.section-tab.active');
+        sessionStorage.setItem('createdScroll', window.scrollY);
+        sessionStorage.setItem('createdTab', activeTab ? activeTab.getAttribute('data-target') : 'all');
+      });
+    });
+  }
 });
 
 const galleryImage =
@@ -189,11 +218,13 @@ function animateTo(nextPhrase) {
   currentPhrase = nextPhrase;
 }
 
-createTicker(currentPhrase);
+if (ticker) {
+  createTicker(currentPhrase);
 
-let index = 0;
+  let index = 0;
 
-setInterval(() => {
-  index = (index + 1) % phrases.length;
-  animateTo(phrases[index]);
-}, 3500);
+  setInterval(() => {
+    index = (index + 1) % phrases.length;
+    animateTo(phrases[index]);
+  }, 3500);
+}
