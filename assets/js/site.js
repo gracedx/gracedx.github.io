@@ -41,10 +41,9 @@ const curiosities = [
   "p2p payments",
   "scarcity vs. trust",
   "payments in healthcare",
-  "personal investing pls help",
   "zero knowledge proofs",
   "donna tartt",
-  "openclaw"
+  "hermes/openclaw"
 ];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
