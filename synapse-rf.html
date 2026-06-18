@@ -95,14 +95,14 @@
       <p>
         The Baylor Tolias lab collected a dataset of 185k+ Axonal Dendritic Proximity (ADP) instances between neurons 
         in mice, and sought to create a machine learning model that would predict whether an ADP instance would result
-        in a synapse. All neuron synpases form from ADPs, but not all ADPs form synpases. The lab partnered with Rice University's 
+        in a synapse. All neuron synapses form from ADPs, but not all ADPs form synapses. The lab partnered with Rice University's 
         ELEC 478/578 (Electrical Engineering: Machine Learning), and our final project was to create a model that 
         would predict neural synapse formation. See more info on the data set <a href="assets/docs/documentation_synapse_prediction.pdf" target="_blank" rel="noopener noreferrer">
           here</a>.
       </p>
       <p>
         I partnered with Yiming Wang; Yiming primarily owned the research of the existing literature
-         on synpase formation and feature 
+         on synapse formation and feature 
         engineering/selection while
         I primarily owned the machine learning model development/selection/testing and 
         fine-tuning, though we collaborated significantly across our workstreams. 
@@ -120,7 +120,7 @@
         various distance-based features such as nuclei distance, average oracle scores, and a projection group 
       feature capturing the brain location pre- and post- meeting of neurons</li>
         <li><strong>feature selection:</strong> we utilized outside research to support feature selection and engineering, 
-        including research which identified importance of neural pathways in synpase formation. ultimately, however, 
+        including research which identified importance of neural pathways in synapse formation. ultimately, however, 
       we employed random forest, a machine learning classifier that is relatively less impacted by feature selection</li>
         <li><strong>model selection:</strong> I employed adaboost, random forest, gradient boost, and neural networks to 
           test prediction accuracy. Yiming also employed several logistic models, varying feature selection. Ultimately, we found that 
@@ -129,7 +129,7 @@
         imbalanced datasets as ours)</li>
         <ul>
           <li>accuracy: (TP+TN) / (TP+TN+FP+FN) where TP = True Positive, TN = True Negative, FP = False Positive, FN = False Negative</li>
-         <li>balanced accuracy: TP/[2*(TP+FN)] + RN/[2*(TN+FP)] where TP = True Positive, TN = True Negative, FP = False Positive, FN = False Negative</li>
+         <li>balanced accuracy: TP/[2*(TP+FN)] + TN/[2*(TN+FP)] where TP = True Positive, TN = True Negative, FP = False Positive, FN = False Negative</li>
         
         </ul>
          </ul>
@@ -154,7 +154,7 @@
         liked the final project in this class, as it was genuine machine learning research for a real lab's dataset.
         If I were to make improvements, I would likely have spent more time finetuning the AdaBoost and neural 
         network models, as these tend to be more sensitive to finetuning (whereas a model like random forest 
-        does not need as much finetuning due to its robustness). However, the finetuning process was extremelyy time-consuming 
+        does not need as much finetuning due to its robustness). However, the finetuning process was extremely time-consuming 
         and memory-consuming for my laptop, which would run for hours each time and start sounding like it was 
         about to explode. Trial by fire for my laptop and I.
       </p>
