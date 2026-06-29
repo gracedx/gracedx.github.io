@@ -168,7 +168,7 @@ details[open] > summary::before {
 .section-tab.active {
   font-family: monospace, serif;
   text-transform: uppercase;
-  font-style: normal;
+  font-style: italic;
 }
 
 .created-section {
