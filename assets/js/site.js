@@ -85,10 +85,10 @@ if (galleryImage) {
 const curiosities = [
   "p2p payments",
   "scarcity vs. trust",
-  "payments in healthcare",
+  "individuation of app creation",
   "zero knowledge proofs",
   "donna tartt",
-  "hermes/openclaw"
+  "zeroclaw / agent harnesses"
 ];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
@@ -131,17 +131,17 @@ scrambleTo(curiosities[0]);
 
 const phrases = [
   "principles by ray dalio (book)      ",
-  "deep green by christian kuria (song)      ",
+  "spark by blonde suppermacy (song)         ",
   "zmh.github.io/personal-site-gallery (site)",
-  "backrooms wiki (site)",
-  "felipe's (food)",
-    "the mbta (the mbta)"
+  "curtains ! by zaybeezy (song)",
+  "pepita cafe (cafe)",
+  "the mbta (the mbta)"
 ];
 
 const ticker = document.getElementById("ticker");
 
 const alphabet =
-  " abcdefghijklmnopqrstuvwxyz()./ -'";
+  " abcdefghijklmnopqrstuvwxyz()./ !-'";
 
 let currentPhrase = phrases[0];
 
