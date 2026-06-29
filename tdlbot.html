@@ -175,7 +175,8 @@
        Note that it is most convenient to keep zeroclaw located in your root directory, if you choose to download the 
        assets as I did. Additionally, zeroclaw also comes with the terminal UI zerocode, as well as a browser GUI that can be 
        accessed at your local gateway at http://127.0.0.1:42617. The first step is to set up an agent, which I did with basic/
-       default settings, including a locked_down risk profile (but depending on your personal risk appetite and device usage, you 
+       default settings, including a locked_down risk profile (which i think is already plenty unlocked for my level of use 
+       but depending on your personal risk appetite and device usage, you 
        can choose to provide more permissioning) as well as API access to a model (I used MiniMax here).
 
        </p>
@@ -193,8 +194,8 @@
         <p> These following steps were heavily supplemented with Claude Code, so I will caveat that it may be better to ask Claude code 
         to help with setting up the channel. From what I remember, the next step is to bind your Zeroclaw agent to only answer to your chat 
         (this way, not anyone can just message your bot and utilize your tokens or prompt inject or otherwise hack your harneess).
-        To do so, you first need to get your Chat ID by navigating to this link (replacing YourBOTToken with the appropriate token)
-        here https://api.telegram.org/bot<YourBOTToken>/getUpdates. Then text your bot, and the URL should show your chat ID.
+        To do so, you first need to get your Chat ID by navigating to this link (replacing [YourBOTToken] with the appropriate token)
+        here: https://api.telegram.org/bot[YourBOTToken]/getUpdates. Then text your bot, and the URL should show your chat ID.
       </p>
       <p>
         Next, navigate in the TUI/GUI to your agent that you want to bind to this channel. Navigate to agents > [agent] > channels,
@@ -205,10 +206,10 @@
         Then, you can try messaging your bot on Telegram, and it should request a bind key. Zeroclaw should generate it, 
         and you can then text your bot the bind key. (I will say I remember having a lot of trouble personally on this step, 
         and had to troubleshoot quite a bit with Claude Code). Then - it should be good to go! You can msesage your Telegram bot 
-        and it can make files on your computer, edits, text you back info, and is also an AI wrapper so acts as a chatbot as well.
+        and it can make files on your computer, edits, text you back info, act as a chatbot, all that.
       </p>
       <p>
-        Additionally, if you have trouble finding where the files are writing to as I did, it is located within your
+        Additionally, if you have trouble finding where zeroclaw is writing files to as I did, it is located within your
         zeroclaw directory, under the agents folder, under a workspace directory. You can access it in your terminal 
         (cd ~/.zeroclaw/agents/AGENTNAME/workspace) and once you're in the directory, you can also view it in your files 
         with the terminal code "open ." which will open your finder on Mac.
@@ -217,8 +218,9 @@
        Finally, now that there was a working Telegram channel with zeroclaw, the last step was to personalize it to the 
        smart to-do list features that I was looking for. Essentially, I created a to-do list manager agent specific
        to this to-do list bot, and I personalized it via markdown file. I first drafted a version, sent it to ChatGPT, which 
-       then generated the final version that is linked here. I also refined it via prompting, as I found that it was also
-       effective in revising the agent's abilities. With that said, this project in its current form is very much only for 
+       then generated the final version that is linked at the top of this page. I also refined it via directly texting (i.e. 
+       prompting) the telegram bot, as I found that was also an
+       effective strategy in revising the agent's abilities. With that said, this project in its current form is very much only for 
        personal use, as it could provide significant cybersecurity risks (e.g. very susceptible to prompt injection)
        at scale.
       </p>
@@ -237,7 +239,7 @@
       <p>
         <!--I feel like the entire human-agent relationship is one huge WIDI nowadays. -->
         This project made me feel like we now live in a world where humans are the Writers and agents are the Doers, and
-        the entire human-agent relationship is just one big WIDI.
+        the entire human-agent relationship is just one big recursive WIDI.
     
         </p>
 
