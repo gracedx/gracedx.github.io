@@ -83,12 +83,12 @@ if (galleryImage) {
 
 
 const curiosities = [
+  "trust vs. scarcity",
+  "zeroclaw",
   "p2p payments",
-  "scarcity vs. trust",
-  "individuation of app creation",
+  "poker",
   "zero knowledge proofs",
-  "donna tartt",
-  "zeroclaw / agent harnesses"
+  "donna tartt"
 ];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
