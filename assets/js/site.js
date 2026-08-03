@@ -86,6 +86,7 @@ const curiosities = [
   "trust vs. scarcity",
   "zeroclaw",
   "p2p payments",
+  "reinforcement learning",
   "poker",
   "zero knowledge proofs",
   "donna tartt"
@@ -131,10 +132,10 @@ scrambleTo(curiosities[0]);
 
 const phrases = [
   "principles by ray dalio (book)      ",
-  "spark by blonde suppermacy (song)         ",
+  "RAIN by R!R!Riot (song)         ",
   "zmh.github.io/personal-site-gallery (site)",
-  "curtains ! by zaybeezy (song)",
-  "pepita cafe (cafe)",
+  "CONTROL by PureSnow (song)",
+  "matsunori (restaurant)      ",
   "the mbta (the mbta)"
 ];
 
