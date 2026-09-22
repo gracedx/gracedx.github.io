@@ -85,8 +85,10 @@ if (galleryImage) {
 const curiosities = [
   "poker",
   "trust vs./and scarcity",
+  "sf cafes",
   "telepathy",
-  "honesty",
+  "teleportation",
+  "sf housing pls i lose my sublet in january",
   "wallfacers"
 ];
 
@@ -129,12 +131,8 @@ scrambleTo(curiosities[0]);
 
 
 const phrases = [
-  "principles by ray dalio (book)      ",
-  "before sunrise (movie)         ",
-  "zmh.github.io/personal-site-gallery (site)",
-  "CONTROL by PureSnow (song)",
-  "matsunori (restaurant)      ",
-  "the mbta (the mbta)"
+  "principles by ray dalio (book)      ",  
+   "bible texts - earth to emily (song)      "
 ];
 
 const ticker = document.getElementById("ticker");
