@@ -83,13 +83,11 @@ if (galleryImage) {
 
 
 const curiosities = [
-  "trust vs. scarcity",
-  "zeroclaw",
-  "p2p payments",
-  "reinforcement learning",
   "poker",
-  "zero knowledge proofs",
-  "donna tartt"
+  "trust vs./and scarcity",
+  "telepathy",
+  "honesty",
+  "wallfacers"
 ];
 
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&";
@@ -132,7 +130,7 @@ scrambleTo(curiosities[0]);
 
 const phrases = [
   "principles by ray dalio (book)      ",
-  "RAIN by R!R!Riot (song)         ",
+  "before sunrise (movie)         ",
   "zmh.github.io/personal-site-gallery (site)",
   "CONTROL by PureSnow (song)",
   "matsunori (restaurant)      ",
