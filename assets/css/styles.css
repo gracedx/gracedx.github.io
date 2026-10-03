@@ -303,6 +303,41 @@ sup {
   padding-bottom: 1.5rem;
 }
 
+.story-title {
+  font-style: italic;
+  text-align: center;
+}
+
+.scene-break {
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin: 2em auto;
+  color: var(--muted, #888);
+}
+
+.story-opening {
+  display: block;
+  overflow: hidden; /* establish a new block formatting context so the float is contained */
+}
+
+.story-float-img {
+  float: right;
+  width: 240px;
+  max-width: 45%;
+  margin: 0 0 1em 1.5em;
+  border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+  .story-float-img {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1em 0;
+  }
+}
+
 .theme-toggle {
   position: relative;
   width: 32px;
